@@ -114,6 +114,15 @@ function gameObject() {
         }
 
     }
-    console.log(team);
-    //return team;
+    return team;
 };
+
+//function homeTeamName() {
+//let object = gameObject()
+//return object['home']['teamName']
+//}
+//console.log(homeTeamName())
+function homeTeamName() {
+    return gameObject()['home']['teamName']
+}
+console.log(homeTeamName())
