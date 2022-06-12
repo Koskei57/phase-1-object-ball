@@ -1,5 +1,5 @@
 function gameObject() {
-    const team = {
+    return {
         home: {
             teamName: "Brooklyn Nets ",
             colors: ["Black", "White"],
@@ -56,7 +56,7 @@ function gameObject() {
                 }
             }
         },
-        Away: {
+        away: {
             teamName: "Charlotte Hornets",
             colors: ["Turquiose", "Purple"],
             players: {
@@ -114,7 +114,6 @@ function gameObject() {
         }
 
     }
-    return team;
 };
 
 //function homeTeamName() {
@@ -125,4 +124,13 @@ function gameObject() {
 function homeTeamName() {
     return gameObject()['home']['teamName']
 }
-console.log(homeTeamName())
+console.log(homeTeamName());
+
+function numPointsScored(playerName) {
+    debugger;
+    if (gameObject().home.players[playerName]) {
+        return gameObject().home.players[playerName].points
+    } else {
+        return gameObject().away.players[playerName].points
+    }
+}
